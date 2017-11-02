@@ -1,6 +1,6 @@
 #Install Project
 
-$ cd /testerodrigo
+$ cd /teste
 $ npm install
 
 $ gulp watch
