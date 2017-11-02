@@ -1,0 +1,16 @@
+{
+  "name": "desafio-frontend-bennu",
+  "authors": [
+    "Rafael Villa-Verde <villa655321verde@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/hafael/desafio-frontend",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.8.1",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "animate.css": "^3.5.2",
+    "font-awesome": "^4.7.0"
+  }
+}
