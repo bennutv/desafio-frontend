@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Mamãe a bordo</ion-title>
+    <!--ion-searchbar [animated]="true" [showCancelButton]="false">
+    </ion-searchbar-->
+  </ion-navbar>
+    <header class="header">
+        <nav class="page-links">
+            <ul>
+                <li><a href="javascript:;" title="">Início</a></li>
+                <li><a href="javascript:;" title="">Grávidas</a></li>
+                <li><a href="javascript:;" title="">Pediatria</a></li>
+                <li><a href="javascript:;" title="">Amamentação</a></li>
+            </ul>
+        </nav>
+    </header><!-- /header -->
+</ion-header>
+
+
+<ion-content padding class="page1">
+
+        <section class="content">
+            <ion-list>
+            <ion-item *ngFor="let feed of feeds" class="vitrine col-xs-6 col-md-4">
+               <ion-thumbnail>
+                  <img [src]="feed.imagem" class="img-responsive img-rounded">
+               </ion-thumbnail>
+               <div class="vitrine-text">
+                    <h2 class="col-xs-8">{{feed.titulo}}</h2>
+                    <a class="col-xs-2" href="" title=""><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                    <a class="col-xs-2" href="" title=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                    
+                    <p>{{feed.descricao}}</p>
+               </div>
+               
+            </ion-item>
+            </ion-list>  
+        </section>
+
+</ion-content>
