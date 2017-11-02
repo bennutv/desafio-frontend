@@ -1,7 +1,10 @@
 #Install Project
 
-cd /testerodrigo
-npm install
+$ cd /testerodrigo
+$ npm install
+
+$ gulp watch
+$ ionic serve
 
 ##Requirements
 NodeJS V.6x
