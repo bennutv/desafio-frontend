@@ -14,8 +14,6 @@
     "font-awesome": "^4.7.0",
     "slideout.js": "^1.0.1",
     "handlebars": "^4.0.11",
-    "flexboxgrid": "^6.3.2",
-    "infinite-scroll": "^3.0.2",
-    "scrollmagic": "^2.0.5"
+    "flexboxgrid": "^6.3.2"
   }
 }
