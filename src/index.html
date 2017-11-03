@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>Desafio frontend | Bennu.tv</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Source+Sans+Pro:400,600" rel="stylesheet">
+</head>
+<body ng-app="bennuApp">
+
+	<div id="main">
+		<header>
+			<div class="top-header">
+				<a href="" class="icon-bars">
+					<i class="fa fa-bars"></i>
+				</a>
+				<h1>Mamães a bordo</h1>
+				<form onsubmit="" class="hidden">
+					<input type="text" name="field-search">
+				</form>
+				<a href="" class="icon-search">
+					<i class="fa fa-search"></i>
+				</a>
+			</div>
+			<nav>
+				<div class="nav-wrap">
+					<ul class="clearfix">
+						<li data-index="0"><a href="#" class="active">Início</a></li>
+						<li data-index="1"><a href="#">Grávidas</a></li>
+						<li data-index="2"><a href="#">Pediatria</a></li>
+						<li data-index="3"><a href="#">Amamentação</a></li>
+						<li data-index="4"><a href="#">Grávidas</a></li>
+						<li data-index="5"><a href="#">Pediatria</a></li>
+						<li data-index="6"><a href="#">Amamentação</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<div class="content" ng-controller="MainCtrl as ctrl">
+			<div class="cards">
+				<div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="item in list | limitTo: limit track by $index">
+					<div class="card">
+				  		<img class="card-img-top" ng-src="images/{{item.imagem}}" alt="Card image cap">
+					  	<div class="card-block">
+					  		<div class="card-title-block">
+						    	<h4 class="card-title">{{item.titulo}}</h4>
+						    	<div class="icons">
+							    	<span><i class="fa fa-heart-o"></i></span>
+							    	<span><i class="fa fa-share-alt"></i></span>
+						    	</div>
+					  		</div>
+			    			<p class="card-text">{{item.descricao}}</p>
+					  	</div>
+				  	</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

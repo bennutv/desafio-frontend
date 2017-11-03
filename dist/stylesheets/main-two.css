@@ -1,0 +1,64 @@
+header {
+  background: #F3D546;
+  color: #FFF; }
+  header .top-header {
+    position: relative;
+    height: 42px;
+    display: flex;
+    justify-content: space-between; }
+    header .top-header .icon-bars,
+    header .top-header .icon-search {
+      flex-basis: 42px;
+      color: #FFF;
+      font-size: 19px;
+      line-height: 42px;
+      width: 42px;
+      height: 42px;
+      text-align: center; }
+  header h1 {
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+    align-self: center; }
+
+nav {
+  height: 30px;
+  overflow-y: hidden; }
+  nav .nav-wrap {
+    height: 50px;
+    overflow-x: auto; }
+  nav ul {
+    margin: 0;
+    padding: 0 10px;
+    width: 680px; }
+  nav li {
+    list-style: none;
+    text-transform: uppercase;
+    float: left;
+    margin-right: 15px; }
+    nav li a {
+      display: inline-block;
+      padding: 0 5px;
+      border-radius: 20px;
+      color: #FFF;
+      font-size: 12px;
+      font-weight: 600; }
+      nav li a.active {
+        background: #EDC128; }
+
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  padding-left: 5px;
+  padding-right: 5px; }
+  .card .card-img-top {
+    width: 100%; }
+  .card .card-title {
+    color: #BCBCC1;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .card .card-text {
+    color: #666670;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400; }

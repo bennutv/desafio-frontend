@@ -1,0 +1,156 @@
+
+
+$primaryColor: #F3D546;
+$primaryDarkColor: #EDC128;
+$textColor: #666670;
+$textLightColor: #BCBCC1;
+$openSans: 'Open Sans', sans-serif;
+$sourceSans: 'Source Sans Pro', sans-serif;
+
+header {
+	background: $primaryColor;
+	color: #FFF;
+	padding-top: 50px;
+
+	.top-header	{
+		background: $primaryColor;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 50px;
+		z-index: 33;
+		display: flex;
+		justify-content: space-between;
+		.icon-bars,
+		.icon-search {
+			flex-basis: 40px;
+			color: #FFF;
+			font-size: 14px;
+			line-height: 50px;
+			width: 40px;
+			height: 50px;
+			text-align: center;
+		}
+		.icon-bars {
+			// left: 0;
+		}
+		.icon-search {
+			// right: 0;
+		}
+		&.shadow {
+			box-shadow: 0 0 8px rgba(0,0,0,0.25)
+		}
+	}
+
+	h1 {
+		font-family: $sourceSans;
+		font-weight: 600;
+		font-size: 18px;
+		text-align: center;
+		margin: 0;
+		align-self: center;
+	}
+}
+
+nav {
+	height: 30px;
+	overflow-y: hidden;
+
+	.nav-wrap {
+		height: 50px;
+		overflow-x: auto;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0 10px;
+		width: 700px;
+		margin-left: 0;
+		transition: margin .3s ease;
+	}
+	li {
+		list-style: none;
+		text-transform: uppercase;
+		float: left;
+		margin-right: 15px;
+		a {
+			display: inline-block;
+			padding: 0 10px;
+			height: 21px;
+			border-radius: 12px;
+			color: #FFF;
+			font-size: 11px;
+			font-family: $openSans;
+			font-weight: 600;
+			line-height: 20px;
+			transition: .2s linear;
+			&.active {
+				background: $primaryDarkColor;
+			}
+			&:hover {
+				background: $primaryDarkColor;
+				color: #FFF;
+				text-decoration: none;
+			}
+			&:focus {
+				color: #FFF;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.cards {
+	padding: 10px 5px;
+	> div {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
+
+.card {
+	border-radius: 4px;
+	overflow: hidden;
+	transition: .2s linear;
+	margin-bottom: 10px;
+
+	&:hover {
+		box-shadow: 0 0 12px rgba(0,0,0,0.2);
+	}
+	.card-block {
+		padding: 10px;
+	}
+	.card-img-top {
+		width: 100%;
+	}
+	.card-title-block {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 10px;
+	}
+	.card-title {
+		color: $textLightColor;
+		font-family: $openSans;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 10px;
+		flex: 1;
+		margin: 0;
+		padding-right: 2px;
+	}
+	.icons {
+		color: $textLightColor;
+		span {
+			margin: 0 2px
+		}
+	}
+	.card-text {
+		color: $textColor;
+		font-family: $sourceSans;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 18px;
+	}
+}
