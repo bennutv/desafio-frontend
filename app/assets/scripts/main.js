@@ -100,7 +100,9 @@ var App = function(){
         $('#shelf-wrapper-list').append(template(_remapData[i]));
       }
 
-
+      $('.heart-button, .share-button').on('click', function(){
+        $(this).toggleClass('active');
+      });
 
     },
 

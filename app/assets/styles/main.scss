@@ -126,7 +126,7 @@ body {
 }
 
 .shelf {
-  height: 100%;
+  height: calc( 100% - 140px );
   overflow: auto;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -webkit-overflow-scrolling: touch;

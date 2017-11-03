@@ -1,37 +1,30 @@
 # Desafio - Front-End Developer
 Esse teste foi criado para avaliarmos seus conhecimentos gerais como desenvolvedor Front-end: HTML, CSS, Javascript, design responsivo e lógica. O desafio consiste em desenvolver a Home de um app fictício, seguindo o layout do psd disponibilizado, utilizando algumas funcionalidades e interações em Javascript.
 
-## Instruções gerais:
+## Instruções gerais para gerar um build dos arquivos:
 
-1. Seguir à risca o layout em psd: espaçamentos, cores, tipografia etc.
-2. Preocupe-se em desenvolver o CSS utilizando mobile first, porém, não se esqueça que o CSS deve ser responsivo e respeitar os seguintes breakpoints:
+```bash
+$ npm install && bower install
+```
 
-| Nome do breakpoint | Largura mínima |
-|--------------------|----------------|
-| Phone              | 320px          |
-| Tablet             | 768px          | 
-| Desktop            | 1024px         |
+### Obs antes de buildar:
 
-3. Você está livre para escolher a estrutura de diretórios da aplicação;
-4. Poderá utilizar qualquer linguagem de preprocessador CSS ou CSS puro, além de poder utilizar bibliotecas de CSS como Compass, Bourbon, Animatecss, entre outras;
-5. Pode utilizar um task runner de sua preferência, e se quiser, utilizar componentes do bower;
-6. A lista de posts deve ser gerada a partir do JSON (bennu.json) ;
-7. A navegação entre as abas (tabs logo abaixo do header) deverá conter efeito em javascript. No scroll, as abas devem sumir, somente o header permanecerá fixo;
-8. O loader deverá surgir a partir do 4º post, enquanto o restante é carregado;
-9. É importante não esquecer de incluir algum efeito/animação no evento de hover dos links que estão nas abas, ao topo da página, no post e no estado ativo do ícone de favorito (escolha o efeito que preferir );
-10. Não altere o arquivo bennu.json
+1. Necessário ter a ruby gem do compass css
+1. Os arquivos finais ficam no diretório /dist
 
-## Observações:
-1. Respeite os breakpoints informados acima;
-2. Não deixe realizar o commit também dos arquivos não minificados;
-3. Lembre-se de escrever um arquivo README.md com as instruções para rodar o seu projeto;
-4. O código deverá ser responsivo e multiplataforma, compatível com IE10+, Chrome, Safari e Firefox.
+### Para usar o web server
+```bash
+$ grunt build
+```
 
-* **Extra-points:** Qualquer inclusão de funcionalidade é bem vinda, sinta-se livre para aplicar alguma interação a mais ;)
+### Para assistir com o web server
+```bash
+$ grunt serve
+```
 
-## Arquivos
-Para iniciar o teste, faça um fork deste repositório, crie uma branch com o seu nome e sobrenome ( modelo: nome-sobrenome ) e depois envie-nos o pull request. 
+### Obs:
 
-Qualquer dúvida basta entrar em contato com o email: **bianca.alves@bennu.tv** :)
-
-**Que a força esteja com você o/**
+1. Foi necessário ajustar um erro no arquivo bennu.json (faltava fechar o array);
+2. Infelizmente não houve tempo habil pra criar uma interação com o botão da Lupa, mas eu mostraria um campo de busca no header, e filtraria os artigos pelo texto.
+3. Também não consegui testar em browse IE, não tenho pc windows por aqui :(
+4. As imagens, embora eu tenha usado um minificador, continuam muito pesadas e comprometem drasticamente a performance. Uma dica é remover ela do nó do html a nivel de comparação.
