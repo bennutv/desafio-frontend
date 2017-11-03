@@ -12,6 +12,7 @@
     <!-- build:css assets/styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="bower_components/flexboxgrid/dist/flexboxgrid.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -28,7 +29,7 @@
       WebFont.load({
         google: {
           "families":[
-            "Source Sans Pro:400,600,800",
+            "Source Sans Pro:200,400,600,800",
             "Open Sans:100,200,300,400,500,600,700,800,900"
           ]
         },
@@ -43,19 +44,123 @@
       <p class="browserupgrade">Seu navegador está <strong>desatualizado</strong>. Favor <a href="http://browsehappy.com/">atualizar o seu navegador</a> para uma melhor experiência.</p>
     <![endif]-->
     
-    <h1>Hello.</h1>
-    
+    <section class="container">
 
+      <section class="sidemenu" id="sidemenu">
+        <header class="header">
+          <div class="toolbar">
+            <h2 class="toolbar-title">Menu</h2>
+          </div>
+        </header>
+        <section class="menu">
+          <ul class="menu-list">
+            <li class="menu-item active">
+              <a href="#">Menu Item Ativo</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Menu Item 2</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Menu Item 3</a>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section class="content" id="content">
+        <header class="header">
+          <div class="toolbar">
+            <div class="toolbar-buttons toolbar-buttons-left">
+              <button class="toolbar-button button btn-material" id="sidemenu-toggle">
+                <i class="fa fa-bars"></i>
+              </button>
+            </div>
+            <h2 class="toolbar-title">Mamães a bordo</h2>
+            <div class="toolbar-buttons toolbar-buttons-right">
+              <div class="toolbar-buttons toolbar-buttons-left">
+                <button class="toolbar-button button btn-material">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="segment-bar" data-slideout-ignore>
+            <ul class="segment-bar-list">
+              <li class="active"><a href="#" class="btn-material">Início</a></li>
+              <li><a href="#" class="btn-material">Grávidas</a></li>
+              <li><a href="#" class="btn-material">Pediatria</a></li>
+              <li><a href="#" class="btn-material">Amamentação</a></li>
+              <li><a href="#" class="btn-material">Cuidados</a></li>
+              <li><a href="#" class="btn-material">Brinquedos</a></li>
+            </ul>
+          </div>        
+        </header>
+
+        <section class="shelf" id="shelf">
+          <ul class="row top-xs top-sm top-md top-lg" id="shelf-wrapper-list"></ul>
+          <div id="cssload-pgloading" class="hide">
+            <div class="cssload-loadingwrap">
+              <ul class="cssload-bokeh">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+          <div class="no-more-items hide">
+            <p>Mostrando todos os posts.</p>
+          </div>
+        </section>
+      </section>
+
+    </section>
+    
+    <script id="card-template" type="text/x-handlebars-template">
+      <li class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+        <div class="card">
+          <div class="card-image">
+            <img src="images/{{imageSrc}}">
+          </div>
+          <div class="card-body">
+            <div class="card-actions row between-xs">
+              <div class="card-title col-xs-7">{{title}}</div>
+              <div class="card-buttons col-xs-5">
+                <a href="#" class="btn-material heart-button"><i class="fa fa-heart-o"></i><i class="fa fa-heart"></i></a>
+                <a href="#" class="btn-material share-button"><i class="fa fa-share-alt"></i></a>
+              </div>
+            </div>
+            <p class="card-description">{{description}}</p>
+          </div>
+        </div>
+      </li>
+    </script>
     <!-- build:js assets/scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/emitter-es6/browser/index.js"></script>
+    <script src="bower_components/slideout.js/dist/slideout.js"></script>
+    <script src="bower_components/handlebars/handlebars.js"></script>
+    <script src="bower_components/ev-emitter/ev-emitter.js"></script>
+    <script src="bower_components/desandro-matches-selector/matches-selector.js"></script>
+    <script src="bower_components/fizzy-ui-utils/utils.js"></script>
+    <script src="bower_components/infinite-scroll/js/index.js"></script>
+    <script src="bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
     <!-- build:js assets/scripts/main.js -->
-    <script src="assets/scripts/main.js"></script>
+    <script src="bower_components/infinite-scroll/dist/infinite-scroll.pkgd.js"></script>
+    <script type="text/javascript" src="assets/scripts/main.js"></script>
+    <script type="text/javascript" src="assets/scripts/swipe.detection.js"></script>
+    <script type="text/javascript" src="assets/scripts/jquery.scrollstop.js"></script>
     <!-- endbuild -->
+    <script type="text/javascript">
+      
+      $(document).ready(function(){
+        App.init();
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,36 @@
+/**
+* Media Screen Breakpoints
+*/
+
+$phone-width: 320px !default;
+$phone-min-width: $phone-width !default;
+$phone-max-width: ($phone-width - 1) !default;
+
+$tablet-width: 768px !default;
+$tablet-min-width: $tablet-width !default;
+$tablet-max-width: ($tablet-width - 1) !default;
+
+$desktop-width: 1024px !default;
+$desktop-min-width: $desktop-width !default;
+
+/**
+* Layout properties
+*/
+
+/**
+* Colors
+*/
+$body-background: #f5f6fa !default;
+$font-color-default: #30313e !default;
+$font-color-mutted: #adadb3 !default;
+$font-color-header: #fff !default;
+$header-background-color: #f3d546 !default;
+$icon-active-color: #f2656f !default;
+$segment-active-color: #edc128 !default;
+
+
+/**
+* Typography
+*/
+$font-family-default: 'Open Sans', Helvetica, Arial, sans-serif !default;
+$font-family-titles: 'Source Sans Pro', Helvetica, Arial, sans-serif !default;

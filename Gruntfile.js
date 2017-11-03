@@ -31,7 +31,7 @@ module.exports = function(grunt) {
       options: {
         port: 9000,
         livereload: 35729,
-        hostname: 'localhost'
+        hostname: '0.0.0.0'
       },
       livereload: {
         options: {
@@ -43,6 +43,14 @@ module.exports = function(grunt) {
               connect().use(
                 '/bower_components',
                 connect.static('./bower_components')
+              ),
+              connect().use(
+                '/assets/scripts/bennu.json',
+                connect.static('./bennu.json')
+              ),
+              connect().use(
+                '/images',
+                connect.static('./dist/images')
               ),
               connect().use(
                 '/app/assets/styles',
@@ -69,6 +77,10 @@ module.exports = function(grunt) {
       compass: {
         files: ['<%= project.app %>/assets/styles/{,*/}*.{scss,sass}'],
         tasks: ['compass:server', 'postcss:server']
+      },
+      scripts: {
+        files: ['<%= project.app %>/assets/scripts/{,*/}*.js'],
+        tasks: ['uglify']
       },
       // styles: {
       //   files: [
@@ -166,7 +178,7 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: './images',
+          cwd: './imagens',
           src: '{,*/}*.{png,jpg,jpeg,gif}',
           dest: '<%= project.dist %>/images'
         }]
@@ -237,6 +249,13 @@ module.exports = function(grunt) {
             'bower_components/font-awesome/fonts/*'
           ],
           dest: '<%= project.dist %>'
+        }, {
+          expand: true,
+          cwd: './',
+          src: [
+            'bennu.json'
+          ],
+          dest: '<%= project.dist %>/assets/scripts'
         }]
       },
       styles: {
@@ -270,13 +289,13 @@ module.exports = function(grunt) {
   grunt.registerTask('serve', function (target) {
     
     grunt.task.run([
-      'clean:server', 'wiredep', 'concurrent:server', 'postcss:server', 'connect:livereload', 'watch'
+      'clean:server', 'wiredep', 'concurrent:server', 'postcss:server', 'copy:dist', 'imagemin', 'connect:livereload', 'watch'
     ]);
   });
 
   grunt.registerTask('build', function (target) {
     grunt.task.run([
-      'clean:dist', 'wiredep', 'concurrent:dist', 'postcss', 'copy:dist', 'cssmin'
+      'clean:dist', 'wiredep', 'concurrent:dist', 'postcss', 'copy:dist', 'imagemin', 'cssmin'
     ]);
   });
 
