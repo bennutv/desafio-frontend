@@ -43,7 +43,7 @@ angular.module('bennuApp')
 	}]);
 
 /**
- * Document scroll
+ * Moving menu according to anchor position
  */
 angular.module('bennuApp')
     .directive('nav', ['$window', ($window) => {
@@ -68,8 +68,6 @@ angular.module('bennuApp')
 	                	if(index > 0) {
 	                		let target = document.querySelector('nav li[data-index="'+ (index-1) +'"] a');
 		                    let marginScroll = target.offsetLeft - 10;
-		                    console.log(marginScroll);
-		                    // marginScroll = marginScroll < 0 ? 0 : marginScroll;
 	                        let lastValue = parseInt(window.getComputedStyle(listWrap, null).getPropertyValue('margin-left'));
 	                        listWrap.style.marginLeft = lastValue + (-1 * marginScroll) + 'px'
 	                	}
