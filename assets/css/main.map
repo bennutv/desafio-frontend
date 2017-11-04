@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../sass/main.css",
+	"sources": [
+		"../sass/main.sass"
+	],
+	"sourcesContent": [
+		"nav {\n\tul {\n\t\tmargin: 0;\n\t\tpadding: 0;\n\t\tlist-style: none; }\n\n\tli {\n\t\tdisplay: inline-block; }\n\n\ta {\n\t\tdisplay: block;\n\t\tpadding: 6px 12px;\n\t\ttext-decoration: none;\n } }\t\t// juca\n"
+	],
+	"mappings": ";AAAA,AACC,GADE,CACF,EAAE,CAAC;EACF,MAAM,EAAE,CAAE;EACV,OAAO,EAAE,CAAE;EACX,UAAU,EAAE,IAAK;CAAG;;;AAJtB,AAMC,GANE,CAMF,EAAE,CAAC;EACF,OAAO,EAAE,YAAa;CAAG;;;AAP3B,AASC,GATE,CASF,CAAC,CAAC;EACD,OAAO,EAAE,KAAM;EACf,OAAO,EAAE,QAAS;EAClB,eAAe,EAAE,IAAK;CACtB",
+	"names": []
+}
