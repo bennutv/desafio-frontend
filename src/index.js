@@ -89,7 +89,8 @@ const mainCtrl = ['$scope', '$http', '$timeout', ($scope, $http, $timeout) => {
    */
   $scope.closePost = (ev) => {
     $scope.hasSelectedPost = false;
-    ev.preventDefault();
+    if(ev)
+      ev.preventDefault();
   };
 
 }];
