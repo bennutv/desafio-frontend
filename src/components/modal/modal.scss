@@ -1,0 +1,105 @@
+.modal-post {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  height: auto;
+  z-index: 2000;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  @media screen and (min-width: 768px) {
+    left: 50%;
+    right: inherit;
+    max-width: 630px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  background: rgba(0,0,0,0.4);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal-show {
+  visibility: visible;
+}
+
+.modal-show ~ .modal-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: #FFF;
+  position: relative;
+  border-radius: 6px;
+  margin: 0 auto;
+  border: 0;
+  overflow: hidden;
+}
+
+.modal-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 19px;
+  text-shadow: 0 0 4px rgba(0,0,0,0.2);
+  color: #FFF;
+}
+
+.modal-post .modal-content {
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal-show.modal-post .modal-content {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+.wrap-text {
+  padding: 10px;
+}
+
+.post-title {
+  color: $textColor;
+  font-family: $openSans;
+  font-weight: 700;
+  // text-transform: uppercase;
+  font-size: 16px;
+  flex: 1;
+  margin: 5px 0 10px;
+  padding-right: 2px;
+}
+
+.post-text {
+  color: $textColor;
+  font-family: $sourceSans;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}

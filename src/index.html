@@ -40,15 +40,18 @@
 		</header>
 
 		<div class="content">
-			<div class="cards clearfix">
-				<div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="item in list | limitTo: limit | filter: {titulo: postsFilter} track by $index">
+			<div class="cards clearfix" ng-class="{'visible': allPostsRendered}">
+				<div class="col-xs-6 col-sm-4 col-md-3"
+                    ng-repeat="item in list | limitTo: limit | filter: {titulo: postsFilter} track by $index"
+                    ng-repeat-finish last-item="$last">
 					<div class="card">
-				  		<img class="card-img-top" ng-src="images/{{item.imagem}}" alt="{{item.titulo}}">
+				  		<img class="card-img-top" ng-src="images/{{item.imagem}}" alt="{{item.titulo}}" ng-click="viewPost(item)">
 					  	<div class="card-block">
 					  		<div class="card-title-block">
-						    	<h4 class="card-title">{{item.titulo}}</h4>
+						    	<h4 class="card-title" ng-click="viewPost(item)">{{item.titulo}}</h4>
 						    	<div class="icons">
-							    	<span ng-click="item.favorited = !item.favorited" ng-class="{'favorited': item.favorited}">    <i class="fa fa-heart-o" ng-class="{'fa-heart': item.favorited, 'fa-heart-o': !item.favorited}"></i>
+							    	<span ng-click="item.favorited = !item.favorited;" ng-class="{'favorited': item.favorited}">
+                                        <i class="fa fa-heart-o" ng-class="{'fa-heart': item.favorited, 'fa-heart-o': !item.favorited}"></i>
                                     </span>
 							    	<span><i class="fa fa-share-alt"></i></span>
 						    	</div>
@@ -64,7 +67,9 @@
             <!-- Loader element -->
             <loader ng-show="isLoading"></loader>
 		</div>
-
+        <!-- Modal post -->
+        <modal></modal>
+        <div class="modal-overlay" ng-click="closePost($event);"></div>
 	</div>
 </body>
 </html>

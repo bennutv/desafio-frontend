@@ -1,0 +1,10 @@
+<div class="modal-post" ng-class="{'modal-show': hasSelectedPost}">
+	<div class="modal-content">
+		<img ng-src="images/{{selectedPost.imagem}}" alt="{{selectedPost.titulo}}" width="100%">
+		<div class="wrap-text">
+			<h3 class="post-title">{{selectedPost.titulo}}</h3>
+			<p class="post-text">{{selectedPost.descricao}}</p>
+			<span class="modal-close" ng-click="closePost()"><i class="fa fa-times-circle"></i></span>
+		</div>
+	</div>
+</div>

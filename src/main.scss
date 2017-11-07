@@ -132,6 +132,13 @@ nav {
 		padding-left: 5px;
 		padding-right: 5px;
 	}
+   transition: all .3s;
+   visibility: hidden;
+   opacity: 0;
+   &.visible {
+      opacity: 1;
+      visibility: visible;
+   }
 }
 
 .card {
@@ -183,4 +190,5 @@ nav {
 	}
 }
 
-@import 'components/loader/loader'
+@import 'components/loader/loader';
+@import 'components/modal/modal';

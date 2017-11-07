@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './main.scss';
 import * as bennuList from './bennu.json';
 import loader from './components/loader/loaderDirective';
+import modal from './components/modal/modalDirective';
 import 'angular';
 
 /**
@@ -23,6 +24,9 @@ const mainCtrl = ['$scope', '$http', '$timeout', ($scope, $http, $timeout) => {
   $scope.postsFilter = '';
   $scope.formVisible = false;
 
+  $scope.hasSelectedPost = false;
+  $scope.selectedPost = undefined;
+
   /**
    * Load more posts based on limitIncrement variable
    */
@@ -35,6 +39,15 @@ const mainCtrl = ['$scope', '$http', '$timeout', ($scope, $http, $timeout) => {
         $scope.isLoading = false;
       }, 1500);
     }
+  });
+
+  /**
+   * Detect that all posts are loaded and show them up
+   * Avoid undesired brackets before repeat is completed
+   * Softens initial posts load
+   */
+  $scope.$on('ngRepeatFinished', () => {
+    $scope.allPostsRendered = true;
   });
 
   /**
@@ -63,6 +76,22 @@ const mainCtrl = ['$scope', '$http', '$timeout', ($scope, $http, $timeout) => {
     return !postFound;
   }
 
+  /**
+   * Show post modal with details
+   */
+  $scope.viewPost = (post) => {
+    $scope.selectedPost = post;
+    $scope.hasSelectedPost = true;
+  };
+
+  /**
+   * Close post modal
+   */
+  $scope.closePost = (ev) => {
+    $scope.hasSelectedPost = false;
+    ev.preventDefault();
+  };
+
 }];
 
 /**
@@ -90,8 +119,8 @@ const body = ['$document', '$window', ($document, $window) => {
         // User is scrolling down and hasn't more content or
         // content height is smaller than screen
         if (ev.wheelDeltaY < 0 &&
-          element[0].scrollHeight <= $window.innerHeight ||
-          element[0].scrollHeight == $window.innerHeight + $window.pageYOffset) {
+          (element[0].scrollHeight <= $window.innerHeight ||
+            element[0].scrollHeight == $window.innerHeight + $window.pageYOffset)) {
           $scope.$broadcast('getMorePosts');
         }
       })
@@ -136,6 +165,23 @@ const nav = ['$window', ($window) => {
   }
 }];
 
+/**
+ * Detect if some item in loop is the last
+ */
+const ngRepeatFinish = ['$rootScope', ($rootScope) => {
+  return {
+    restrict: 'A',
+    scope: {
+      lastItem: '='
+    },
+    link: ($scope) => {
+      if ($scope.lastItem) {
+        $rootScope.$broadcast('ngRepeatFinished');
+      }
+    }
+  }
+}]
+
 angular.module('bennuApp')
   // Define Main Controller
   .controller('MainCtrl', mainCtrl)
@@ -144,4 +190,8 @@ angular.module('bennuApp')
   // Define nav directive
   .directive('nav', nav)
   // Define loader directive
-  .directive('loader', loader);
+  .directive('loader', loader)
+  // Define modal directive
+  .directive('modal', modal)
+  // Define ngRepeatFinish directive
+  .directive('ngRepeatFinish', ngRepeatFinish);
