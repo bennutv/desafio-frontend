@@ -67,6 +67,10 @@ module.exports = {
             {
                 from: 'src/images',
                 to: 'images'
+            },
+            {
+                from: 'src/components',
+                to: 'components'
             }
         ])
     ]

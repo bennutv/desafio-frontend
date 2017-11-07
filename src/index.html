@@ -38,15 +38,16 @@
 		</header>
 
 		<div class="content" ng-controller="MainCtrl as ctrl">
-			<div class="cards">
+			<div class="cards clearfix">
 				<div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="item in list | limitTo: limit track by $index">
 					<div class="card">
-				  		<img class="card-img-top" ng-src="images/{{item.imagem}}" alt="Card image cap">
+				  		<img class="card-img-top" ng-src="images/{{item.imagem}}" alt="{{item.titulo}}">
 					  	<div class="card-block">
 					  		<div class="card-title-block">
 						    	<h4 class="card-title">{{item.titulo}}</h4>
 						    	<div class="icons">
-							    	<span><i class="fa fa-heart-o"></i></span>
+							    	<span ng-click="item.favorited = !item.favorited" ng-class="{'favorited': item.favorited}">    <i class="fa fa-heart-o" ng-class="{'fa-heart': item.favorited, 'fa-heart-o': !item.favorited}"></i>
+                                    </span>
 							    	<span><i class="fa fa-share-alt"></i></span>
 						    	</div>
 					  		</div>
@@ -55,6 +56,8 @@
 				  	</div>
 				</div>
 			</div>
+            <!-- Loader element -->
+            <loader ng-show="isLoading"></loader>
 		</div>
 
 	</div>

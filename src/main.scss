@@ -1,5 +1,4 @@
 
-
 $primaryColor: #F3D546;
 $primaryDarkColor: #EDC128;
 $textColor: #666670;
@@ -145,6 +144,9 @@ nav {
 		span {
 			margin: 0 2px
 		}
+      .favorited {
+         color: red;
+      }
 	}
 	.card-text {
 		color: $textColor;
@@ -154,3 +156,5 @@ nav {
 		line-height: 18px;
 	}
 }
+
+@import 'components/loader/loader'
