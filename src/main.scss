@@ -50,6 +50,28 @@ header {
 		margin: 0;
 		align-self: center;
 	}
+
+   form {
+      overflow: hidden;
+      width: 0;
+      display: block;
+      position: absolute;
+      right: 40px;
+      opacity: .65;
+      top: 10px;
+      transition: .3s ease;
+      &.visible {
+         opacity: 1;
+         width: calc(100% - 50px)
+      }
+      .form-control {
+         width: 100%;
+         border: 0;
+         font-size: 13px;
+         height: 30px;
+         color: #323232;
+      }
+   }
 }
 
 nav {
@@ -98,6 +120,10 @@ nav {
 			}
 		}
 	}
+}
+
+.alert-warning {
+   margin: 0 5px;
 }
 
 .cards {

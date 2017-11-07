@@ -8,18 +8,20 @@
 </head>
 <body ng-app="bennuApp">
 
-	<div id="main">
+	<div id="main" ng-controller="MainCtrl as ctrl">
 		<header>
 			<div class="top-header">
 				<a href="" class="icon-bars">
 					<i class="fa fa-bars"></i>
 				</a>
 				<h1>Mamães a bordo</h1>
-				<form onsubmit="" class="hidden">
-					<input type="text" name="field-search">
+				<form action="" ng-submit="return;" ng-class="{'visible': formVisible}">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="field-search" ng-model="postsFilter" placeholder="Buscar por título...">
+                    </div>
 				</form>
-				<a href="" class="icon-search">
-					<i class="fa fa-search"></i>
+				<a href="#" class="icon-search" ng-click="toggleSearchForm($event)">
+					<i class="fa fa-search" ng-class="{'fa-chevron-right': formVisible, 'fa-search': !formVisible}"></i>
 				</a>
 			</div>
 			<nav>
@@ -37,9 +39,9 @@
 			</nav>
 		</header>
 
-		<div class="content" ng-controller="MainCtrl as ctrl">
+		<div class="content">
 			<div class="cards clearfix">
-				<div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="item in list | limitTo: limit track by $index">
+				<div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="item in list | limitTo: limit | filter: {titulo: postsFilter} track by $index">
 					<div class="card">
 				  		<img class="card-img-top" ng-src="images/{{item.imagem}}" alt="{{item.titulo}}">
 					  	<div class="card-block">
@@ -54,7 +56,10 @@
 			    			<p class="card-text">{{item.descricao}}</p>
 					  	</div>
 				  	</div>
-				</div>
+                </div>
+                <div class="alert alert-warning" role="alert" ng-if="postNotFound()">
+                    Nenhum post encontrado com a busca: <i>{{ postsFilter }}</i>
+                </div>
 			</div>
             <!-- Loader element -->
             <loader ng-show="isLoading"></loader>
