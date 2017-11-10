@@ -1,0 +1,10 @@
+<ul id="containerPosts" ng-controller="MainController">
+	<li ng-model="carregaTitulos" ng-repeat="post in carregaPosts">
+		<div class="containerImgList"><img ng-src="src/images/{{post.imagem}}"  alt=""></div>
+		<button ng-class="{'likeActive': changeClassButton, 'like': !changeClassButton}" ng-click="changeClassButton = !changeClassButton"></button>
+		<button class="share"></button>
+		<h2 ng-bind="post.titulo"></h2>
+		<p ng-bind="post.descricao"></p>
+	</li>
+</ul>
+

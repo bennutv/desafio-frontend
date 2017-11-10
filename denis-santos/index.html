@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="src/styles/style.css">
+		
+		<script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/angular/angular.min.js"></script>
+		<script src="node_modules/angular-route/angular-route.min.js"></script>
+		<script src="node_modules/angular-resource/angular-resource.min.js"></script>
+		
+        <title></title>
+    </head>
+	
+    <body>
+		<div id="overlay"></div>
+		<header>
+			<div class="burgMenu">
+				<ul>
+					<li>LOGIN</li>
+					<li>CONFIGURAÇÕES</li>
+					<li>AJUDA</li>
+				</ul>
+			</div>
+			
+			
+			<h1>
+				Mamães a bordo
+			</h1>
+			
+			<input class="search" type="search">
+			
+			<nav id="navMain">
+				<ul>
+					<li>INÍCIO</li>
+					<li>GRÁVIDAS</li>
+					<li>PEDIATRIA</li>
+					<li>AMAMENTAÇÃO</li>
+				</ul>
+			</nav>
+		</header>
+	
+		<div id="container" ng-app="app">
+			<div ng-view=""></div>
+		</div>
+		
+		<script src="src/scripts/app.js"></script>
+        <script src="src/scripts/controllers/main.controller.js"></script>
+		<script src="src/scripts/services/service.js"></script>
+		<script src="src/scripts/js/interacoes.js"></script>
+    </body>
+</html>
