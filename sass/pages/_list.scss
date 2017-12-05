@@ -1,0 +1,16 @@
+.list {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.list .loader-wrapper {
+  position: relative;
+
+  padding: $default-vertical-margin 0;
+  opacity: 1;
+
+  width: 100%;
+  height: 50px;
+
+  transition: opacity .5s;
+}

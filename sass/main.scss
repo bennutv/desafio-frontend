@@ -1,0 +1,60 @@
+// Base SCSS
+
+$default-font-family: 'OpenSans', sans-serif;
+
+$default-font-color: rgba(#30313e, 0.74);
+$light-font-color: #fff;
+$gray-font-color: rgba(#adadb3, 0.82);;
+
+$default-background-color: #f5f6fa;
+$default-header-color: #f3d546;
+$secondary-header-color: #edc128;
+
+$default-border-color: #f0f0f0;
+$default-border-radius: 1px;
+$default-border-color: #ececec;
+
+$default-font-size: .8rem;
+$default-icon-size: 1rem;
+$small-font-size: .7rem;
+
+$default-vertical-margin: .5rem;
+$default-horizontal-margin: .5rem;
+$default-margin: $default-horizontal-margin $default-vertical-margin;
+
+$front-z-index: 100;
+$middle-z-index: 50;
+$back-z-index: 1;
+
+%shadow-1 {
+  box-shadow: 0 0px 6px rgba(0, 0, 0, .1);
+}
+
+%shadow-2 {
+  box-shadow: 0 1px 9px rgba(0, 0, 0, .1);
+}
+
+%shadow-3 {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .1);
+}
+
+%shadow-4 {
+  box-shadow: 2px 3px 20px rgba(0, 0, 0, .1);
+}
+
+// Vendors/Base
+@import 'vendors/_grid';
+@import 'vendors/_icons';
+@import 'base/_base';
+
+// Components
+@import 'components/_header';
+@import 'components/_subheader';
+@import 'components/_card';
+@import 'components/_loader';
+
+// Pages
+@import 'pages/_list';
+
+// Mixins
+@import 'mixin';
