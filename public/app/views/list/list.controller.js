@@ -60,8 +60,8 @@ app.controller("ListController", function($scope, $http, $timeout) {
   }
 
   vm.favoriteCard = function(aCardIndex) {
-    if (vm.babies[aCardIndex]) {
-      vm.babies[aCardIndex].favorite = !vm.babies[aCardIndex].favorite;
+    if (vm.babiesToShow[aCardIndex]) {
+      vm.babiesToShow[aCardIndex].favorite = !vm.babiesToShow[aCardIndex].favorite;
     }
   }
 
