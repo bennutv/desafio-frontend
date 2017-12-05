@@ -1,0 +1,33 @@
+header {
+  position: fixed;
+  top: 0;
+  z-index: $front-z-index;
+
+  width: 100%;
+  min-height: 30px;
+
+  background-color: $default-header-color;
+
+  .header-section {
+    margin: $default-vertical-margin*1.7 0;
+  }
+
+  .title {
+    font-size: $default-font-size*1.3;
+    color: $light-font-color;
+    font-weight: 600;
+    text-align: center;
+
+    margin: 3px 0 0;
+  }
+
+  .header-btn {
+
+    .icon {
+      font-size: $default-icon-size*1.3;
+      margin: 0 $default-horizontal-margin;
+    }
+    
+  }
+
+}

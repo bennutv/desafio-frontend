@@ -1,0 +1,100 @@
+.card {
+  @extend .inline;
+
+  .wrapper {
+    @extend .fade-in-top;
+
+    margin: $default-vertical-margin/2 $default-horizontal-margin/3;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    background-color: #fff;
+    opacity: 0;
+
+    transition: box-shadow .5s, transform .5s;
+
+    animation-fill-mode: forwards;
+
+    &:hover {
+      @extend %shadow-4;
+      transform: scale(1.01, 1.01);
+
+      .card-image {
+        background-size: 170%;
+      }
+    }
+  }
+
+}
+
+@for $i from 1 to 10 {
+  .card:nth-child(#{$i}) .wrapper {
+    animation-delay:         $i * 0.1s;
+    -webkit-animation-delay: $i * 0.1s;
+    -moz-animation-delay:    $i * 0.1s;
+    -o-animation-delay:      $i * 0.1s;
+  }
+}
+
+.card-image {
+  height: 100px;
+
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+
+  background-position: center;
+  background-size: 150%;
+  background-repeat: no-repeat;
+
+  transition: background-size .5s;
+}
+
+.card-content {
+  padding: $default-vertical-margin $default-horizontal-margin*1.3;
+
+  h3.titulo {
+    color: $gray-font-color;
+    font-size: $small-font-size/1.2;
+    font-weight: 600;
+    line-height: 1.7;
+    margin: 4px 0 0;
+
+    white-space: nowrap;
+  	text-overflow: ellipsis;
+  	overflow: hidden;
+  }
+
+  p.descricao {
+    font-size: $default-font-size;
+    margin: $default-vertical-margin 0;
+  }
+
+  .card-title-options {
+
+    button {
+      @extend .inline;
+      float: right;
+      padding: 5px 5px 3px 5px;
+      margin: 0 1px;
+
+      transition: background-color .3s;
+
+      .icon:before {
+        transition: color .2s;
+      }
+
+      .icon-favorite:before {
+        color: red;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,23 @@
+{
+  "name": "desafio-bennu",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "thomascruz <tagante@br.ibm.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.7",
+    "angular-route": "^1.6.7",
+    "normalize-css": "^7.0.0",
+    "jquery": "^3.2.1"
+  }
+}

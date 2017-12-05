@@ -1,0 +1,13 @@
+<div class="subheader">
+
+  <ul class="categories">
+    <li class="category"
+        id="category-{{$index}}"
+        ng-repeat="category in categories"
+        ng-class="$index == currentCategory ? 'selected' : ''"
+        ng-click="categoryClicked($index)">
+      <span class="badge">{{category.name}}</span>
+    </li>
+  </ul>
+
+</div>
