@@ -23,11 +23,77 @@ header {
 
   .header-btn {
 
+    transition: all .15s;
+
+    &.is-active {
+      margin-top: -2px;
+      margin-left: -2px;
+
+      &.menu-btn {
+        transform: rotate(90deg);
+        transition: all .2s;
+      }
+
+    }
+
     .icon {
       font-size: $default-icon-size*1.3;
       margin: 0 $default-horizontal-margin;
     }
-    
+
+  }
+
+  .search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+
+    background-color: transparent;
+    opacity: 0;
+
+    transition: all .3s;
+    animation-fill-mode: forwards;
+
+    &.is-active {
+      display: inherit;
+      background-color: $default-header-color;
+    }
+
+    .search-box {
+      padding: 0 $default-horizontal-margin;
+      margin-top: -$default-vertical-margin*1.1;
+
+      input {
+        @extend %shadow-2;
+        width: 100%;
+
+        border: none;
+        border-radius: 5px;
+        padding: $default-vertical-margin*1.5 $default-horizontal-margin*2;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      button {
+        position: absolute;
+        top: 50%;
+        right: $default-horizontal-margin;
+
+        transform: translateY(-60%);
+
+        .icon {
+          font-size: $default-icon-size*1.3;
+
+          &:before {
+            color: $default-font-color;
+          }
+        }
+      }
+    }
   }
 
 }

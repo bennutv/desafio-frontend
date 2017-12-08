@@ -98,12 +98,25 @@ button {
   animation:         pump .5s ease-out 1; /* IE 10+, Fx 29+ */
 }
 
+.fade-in {
+  -webkit-animation: fade-in .1s ease-in 1; /* Safari 4+ */
+  -moz-animation:    fade-in .1s ease-in 1; /* Fx 5+ */
+  -o-animation:      fade-in .1s ease-in 1; /* Opera 12+ */
+  animation:         fade-in .1s ease-in 1; /* IE 10+, Fx 29+ */
+}
+
+.fade-out {
+  -webkit-animation: fade-out .1s ease-in 1; /* Safari 4+ */
+  -moz-animation:    fade-out .1s ease-in 1; /* Fx 5+ */
+  -o-animation:      fade-out .1s ease-in 1; /* Opera 12+ */
+  animation:         fade-out .1s ease-in 1; /* IE 10+, Fx 29+ */
+}
+
 .fade-in-top {
   -webkit-animation: fade-in-top .5s ease-in 1; /* Safari 4+ */
   -moz-animation:    fade-in-top .5s ease-in 1; /* Fx 5+ */
   -o-animation:      fade-in-top .5s ease-in 1; /* Opera 12+ */
   animation:         fade-in-top .5s ease-in 1; /* IE 10+, Fx 29+ */
-
 }
 
 /* FADE OUT */

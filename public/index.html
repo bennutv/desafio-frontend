@@ -26,13 +26,16 @@
     <script src="assets/js/script.js"></script>
     <script src="app/components/header/header.controller.js"></script>
     <script src="app/components/header/header.directive.js"></script>
-    <script src="app/components/subheader/subheader.directive.js"></script>
     <script src="app/components/loader/loader.directive.js"></script>
+    <script src="app/components/subheader/subheader.directive.js"></script>
+    <script src="app/components/sidebar/sidebar.controller.js"></script>
+    <script src="app/components/sidebar/sidebar.directive.js"></script>
     <script src="app/views/list/list.controller.js"></script>
     <!-- endinject -->
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <link rel="stylesheet" href="/components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="/components/hamburguers/hamburgers.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
   </head>
@@ -41,6 +44,8 @@
     <header-element></header-element>
 
     <div id="view-element" ng-view></div>
+
+    <sidebar-element></sidebar-element>
 
   </body>
 </html>

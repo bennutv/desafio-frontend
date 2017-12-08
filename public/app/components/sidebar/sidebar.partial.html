@@ -1,0 +1,23 @@
+<div class="sidebar-wrapper closed"
+     ng-class="isClosed == true ? 'closed' : ''">
+
+  <div class="sidebar col-xs-90 col-sm-66 col-md-35 col-lg-20">
+
+    <div class="sidebar-list">
+
+      <div class="sidebar-item disabled title">
+        Categorias
+      </div>
+
+      <div class="sidebar-item"
+           ng-repeat="category in categories"
+           ng-click="categoryClicked($index)"
+           ng-class="$index == currentCategory ? 'selected' : ''">
+        {{category.name}}
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

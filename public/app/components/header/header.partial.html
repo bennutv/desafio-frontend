@@ -1,8 +1,11 @@
 <header ng-init="headerInit()" class="row">
 
   <section class="header-section col-12-5">
-    <button class="header-btn left">
-      <i class="icon icon-menu"></i>
+    <button class="header-btn menu-btn left"
+            ng-class="sidebarClosed == false ? 'is-active' : ''"
+            ng-click="toggleSidebar()">
+      <i class="icon"
+         ng-class="sidebarClosed == true ? 'icon-menu' : 'icon-close'"></i>
     </button>
   </section>
 
@@ -11,9 +14,24 @@
   </section>
 
   <section class="header-section col-12-5">
-    <button class="header-btn right">
+    <button class="header-btn right"
+            ng-click="toggleSearch()">
       <i class="icon icon-search"></i>
     </button>
+  </section>
+
+  <section class="header-section search row"
+           ng-class="isSearchActive == true ? 'fade-in is-active' : 'fade-out'">
+
+    <div class="search-box row">
+      <input placeholder="Pesquisar"
+             ng-model="search"
+             ng-change="searchChanged()">
+      <button ng-click="toggleSearch()">
+        <i class="icon icon-close"></i>
+      </button>
+    </div>
+
   </section>
 
 </header>

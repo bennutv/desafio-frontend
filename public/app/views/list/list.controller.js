@@ -1,6 +1,10 @@
-app.controller("ListController", function($scope, $http, $timeout) {
+app.controller("ListController", function($rootScope, $scope, $http, $timeout) {
 
   var vm = $scope;
+
+  $rootScope.$on('searchChanged', function(evt, args) {
+    vm.search = args.value
+  });
 
   vm.babiesToShow = [];
   vm.loading = false;

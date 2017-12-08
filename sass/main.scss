@@ -7,6 +7,8 @@ $light-font-color: #fff;
 $gray-font-color: rgba(#adadb3, 0.82);;
 
 $default-background-color: #f5f6fa;
+$light-background-color: #fff;
+
 $default-header-color: #f3d546;
 $secondary-header-color: #edc128;
 
@@ -52,6 +54,7 @@ $back-z-index: 1;
 @import 'components/_subheader';
 @import 'components/_card';
 @import 'components/_loader';
+@import 'components/_sidebar';
 
 // Pages
 @import 'pages/_list';
