@@ -1,0 +1,36 @@
+<ion-menu [content]="content">
+  <ion-header id="profile-card">
+    <ion-item class="box-avatar">
+      <ion-avatar item-start>
+        <img src="assets/imgs/avatar.jpg" class="avatar">
+      </ion-avatar>
+      <h2 class="name">David Vanker</h2>
+      <p class="nationality">Vancouver , Canadá</p>
+    </ion-item>
+    <hr class="shadow">
+    <ion-grid class="box-icons">
+        <ion-row>
+            <ion-col class="icons" text-center>
+                <ion-icon name="ios-heart-outline"></ion-icon>
+              Favoritos
+            </ion-col>
+            <ion-col class="icons">
+                <ion-icon name="ios-chatbubbles-outline"></ion-icon>
+              Mensagens
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <hr class="shadow">
+  </ion-header>
+
+  <ion-content class="box-list">
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+          <ion-icon name="ios-arrow-dropright-outline" class="icon-arrow"></ion-icon> {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

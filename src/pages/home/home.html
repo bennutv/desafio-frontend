@@ -1,0 +1,72 @@
+<ion-header id="header">
+  <ion-navbar color="header">
+    <button ion-button menuToggle color="white">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title text-center class="titleHeader" color="white">Mamãe a bordo</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only class="search">
+        <ion-icon name="search" color="white"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content class="bg">
+  <section>
+      <!-- start menu creation -->
+      <nav id="navbar">
+        <ul>
+          <li *ngFor="let menu of menus" >
+            <a href="#">{{menu.name}}</a>
+          </li>
+        </ul>
+      </nav>
+        <!-- finish menu creation -->
+    <ion-grid>
+      <ion-row>
+
+        <ion-col col-xs-12 col-sm-6 col-md-4 col-xl-3 *ngFor="let card of cards">
+          <ion-card>
+            <!-- img card -->
+            <ion-img src="assets/imgs/cards/{{card.imagem}}" class="card-img"></ion-img>
+            <ion-card-content>
+              <ion-row>
+                <ion-col col-9  col-xs-8 col-sm-10 col-md-10 col-lg-10>
+                  <!-- start title card -->
+                  <ion-card-title text-nowrap>
+                    <h4 class="card-title">{{card.titulo}}</h4>
+                  </ion-card-title>
+                  <!-- finish title card -->
+                </ion-col>
+                <ion-col col-3 col-xs-4 col-sm-2 col-md-2 col-lg-2>
+                    <!-- start action icons -->
+                    <div class="card-action">
+                        <ion-icon  name="heart-outline" class="icon-heart" [ngClass]="{'selected': card.isFavorite}" (click)="card.isFavorite = !card.isFavorite"></ion-icon>
+                        <ion-fab right bottom class="icon-share">
+                            <button ion-fab color="transparent">
+                                <ion-icon name="share" ></ion-icon>
+                            </button>
+                            <ion-fab-list side="left">
+                                <ion-icon name="logo-facebook" class="card-button-share facebook"></ion-icon>
+                                <ion-icon name="logo-twitter" class="card-button-share twitter"></ion-icon>
+                                <ion-icon name="logo-vimeo" class="card-button-share vimeo"></ion-icon>
+                                <ion-icon name="logo-googleplus" class="card-button-share googleplus"></ion-icon>
+                            </ion-fab-list>
+                          </ion-fab>
+                    </div>
+                    <!-- finish action icons -->
+                </ion-col>
+              </ion-row>
+              <!-- descriptio card -->
+              <p class="card-description">
+                {{card.descricao}}
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+</ion-content>

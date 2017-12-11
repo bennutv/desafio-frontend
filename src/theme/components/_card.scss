@@ -1,0 +1,78 @@
+// Cards
+page-home{
+  .card{
+    @include space(0, 0);
+    @include size(100%, inherit);
+    box-shadow: none;
+    &-description{
+      @include font(13px,$dark-grey, normal);
+      font-family: 'Source Sans Pro', sans-serif;
+      padding: 5px;
+    }
+
+    &-title{
+      @include space(0, 0);
+      @include size(100%, inherit);
+      @include font(11px,$light-grey, bold);
+      font-family: "Open Sans", sans-serif;
+      min-width: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    &-action{
+      @include font(11px,$light-grey, normal);
+    }
+    &-content-md{
+      padding: 6px;
+    }
+    &-img{
+      width: 110%;
+      background-size: cover;
+      min-height: 100px;
+      background-position: center center;
+    }
+    .icon-share{
+      margin: 0px -5px;
+      .fab-md{
+        @include size(20px,20px);
+        box-shadow: none;
+        line-height: 20px;
+        .ion-md-share:before {
+          color: $light-grey;
+          font-size: 12px;
+        }
+      }
+      .fab-close-icon{
+        @include font(14px,$yellow, bold);
+        line-height: 0;
+        top: 15px;
+        z-index: 1000;
+      }
+
+      .card-button-share {
+        @include border-radius(100px);
+        padding: 5px;
+        margin: 3px 8px;
+        color: white;
+        &.facebook{ background: $icon-facebook; }
+        &.twitter{ background: $icon-twitter; }
+        &.vimeo{ background: $icon-vimeo; }
+        &.googleplus{ background:$icon-googleplus; }
+      }
+
+      ion-fab-list{
+        @include border-radius(100px);
+        margin: -41px -10px;
+        background-color: rgba(255,255,255,0.5);
+        min-height: 10px;
+      }
+    }
+    ion-icon.icon-heart.icon.icon-md.ion-md-heart-outline.selected{
+      &:before{
+        content: "\f308";
+        color: red;
+      }
+    }
+  }
+}

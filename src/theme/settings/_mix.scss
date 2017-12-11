@@ -1,0 +1,23 @@
+// Mixin
+
+@mixin space($m, $p) {
+  margin: $m !important;
+  padding: $p !important;
+}
+
+@mixin size($w, $h) {
+  width: $w !important;
+  height: $h !important;
+}
+
+@mixin font($f,$c,$w){
+  font-size: $f !important;
+  color: $c !important;
+  font-weight: $w !important;
+}
+
+@mixin border-radius($b){
+  -webkit-border-radius: $b;
+  -moz-border-radius: $b;
+  border-radius: $b;
+}

@@ -1,0 +1,25 @@
+// Navbar
+
+#navbar{
+  @include space(0,0);
+  @include size(100%,inherit);
+  overflow-x: scroll;
+  background: $yellow;
+  ul{
+    @include space(0,15px);
+    white-space: nowrap;
+    li{
+      display: inline-block;
+      &:first-child a{
+        background: $dark-yellow;
+      }
+      a{
+        @include font(14px,$white,normal);
+        @include space(0 3px,2px 8px);
+        @include border-radius(50px);
+        font-family: "Open Sans", sans-serif;
+        text-decoration: none;
+      }
+    }
+  }
+}
