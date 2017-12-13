@@ -1,0 +1,93 @@
+// Basic styles: opinionated defaults
+*,
+*:after,
+*:before
+	+box-sizing(border-box)
+
+*:not(.no-transitions),
+*:not(.no-transitions):after,
+*:not(.no-transitions):before
+	+transition(all, 0.3s, ease)
+
+html,
+body,
+button,
+input,
+select,
+textarea
+	color: $color-light-black
+
+body
+	background-color: $color-light-grey
+
+::-moz-selection
+	background: $color-1
+	text-shadow: none
+
+::selection
+	background: $color-1
+	text-shadow: none
+
+hr
+	position: relative
+	display: block
+	width: 100%
+	height: 1px
+	border: 0
+	margin: 1em 0
+	padding-bottom: 3%
+	border-bottom: 1px solid $color-grey
+
+img
+	vertical-align: middle
+
+img,
+video,
+audio,
+embed,
+object
+  max-width: 100%
+
+img,
+video,
+embed,
+object
+  height: auto
+
+embed,
+object
+  height: 100%
+
+img
+  vertical-align: middle
+  -ms-interpolation-mode: bicubic
+
+fieldset
+	border: 0
+	margin: 0
+	padding: 0
+
+textarea
+	resize: vertical
+
+object
+	position: absolute
+	height: 0
+	
+a 
+	text-decoration: none 
+	color: $link-color
+	outline: 0
+	cursor: pointer
+	&:hover, &.active, &.focus
+		text-decoration: none
+		color: $link-color
+
+ul 
+	margin: 0
+	padding: 0
+	list-style:none
+
+input:focus,
+textarea:focus
+	outline: none 

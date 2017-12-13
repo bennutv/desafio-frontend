@@ -1,0 +1,178 @@
+// Helper Classes
+
+/* Custom classes */
+.left
+	float: left
+.right
+	float: right
+.center
+	float: none
+	display: block
+	margin-left: auto
+	margin-right: auto
+
+.txt-left
+	text-align: left
+.txt-right
+	text-align: right
+.txt-center
+	text-align: center
+.txt-hidden
+	text-indent: -9999em
+.txt-upper
+	text-transform: uppercase
+.txt-low
+	text-transform: lowercase
+.txt-title
+	text-transform: capitalize
+
+.first
+	margin-left: 0
+	border-left: 0
+.firstv
+	margin-top: 0
+	border-top: 0
+.last
+	margin-right: 0
+	border-right: 0
+.lastv
+	margin-bottom: 0
+	border-bottom: 0
+
+.bold
+	font-weight: bold
+.italic
+	font-style: italic
+
+/* transparencia */
+.alfa0
+	/* IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+	/* IE 5-7 */
+	filter: alpha(opacity=0)
+	/* Netscape */
+	-moz-opacity: 0
+	/* Safari 1.x */
+	-khtml-opacity: 0
+	/* Good browsers */
+	opacity: 0
+.alfa50
+	/* IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"
+	/* IE 5-7 */
+	filter: alpha(opacity=50)
+	/* Netscape */
+	-moz-opacity: 0.5
+	/* Safari 1.x */
+	-khtml-opacity: 0.5
+	/* Good browsers */
+	opacity: 0.5
+.alfa70
+	/* IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"
+	/* IE 5-7 */
+	filter: alpha(opacity=70)
+	/* Netscape */
+	-moz-opacity: 0.7
+	/* Safari 1.x */
+	-khtml-opacity: 0.7
+	/* Good browsers */
+	opacity: 0.7
+.alfa100
+	/* IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+	/* IE 5-7 */
+	filter: alpha(opacity=100)
+	/* Netscape */
+	-moz-opacity: 1.0
+	/* Safari 1.x */
+	-khtml-opacity: 1.0
+	/* Good browsers */
+	opacity: 1.0
+
+/* Fullscream backgrond image */
+.bgFit
+	-webkit-background-size: contain
+	-moz-background-size: contain
+	-o-background-size: contain
+	background-size: contain
+.bgFull
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+.bgFullwidth
+	-webkit-background-size: 100% auto
+	-moz-background-size: 100% auto
+	-o-background-size: 100% auto
+	background-size: 100% auto
+.bgFullheight
+	-webkit-background-size: auto 100%
+	-moz-background-size: auto 100%
+	-o-background-size: auto 100%
+	background-size: auto 100%
+/* fit image */
+.fit
+	max-width: 100%
+	max-height: 100%
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden
+	display: none
+	visibility: hidden
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden
+	border: 0
+	clip: rect(0 0 0 0)
+	height: 1px
+	margin: -1px
+	overflow: hidden
+	padding: 0
+	position: absolute
+	width: 1px
+/* Extends the visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus
+	clip: auto
+	height: auto
+	margin: 0
+	overflow: visible
+	position: static
+	width: auto
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible
+	visibility: hidden
+/* Clearfix: contain floats */
+.cf:before,
+.cf:after
+	content: " "
+	display: table
+.cf:after
+	clear: both
+.cf
+	*zoom: 1
+
+/* Elements Clearfix */
+header:after,
+section:after,
+article:after,
+footer:after,
+.content:after
+	content: " " /* 1 */
+	display: table /* 2 */
+	clear: both
+
+header:before,
+section:before,
+article:before,
+footer:before,
+.content:before
+	content: " "
+	display: table
+
+header
+section
+article
+footer
+.content
+	*zoom: 1

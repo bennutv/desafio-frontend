@@ -38,12 +38,6 @@
 			"descricao" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
 		},
 		{
-			"id": 6,
-			"imagem": "6.jpg",
-			"titulo": "Lorem ipsum dolor sit amet",
-			"descricao" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-		},
-		{
 			"id": 7,
 			"imagem": "7.jpg",
 			"titulo": "Lorem ipsum dolor sit amet",

@@ -1,18 +1,1 @@
-//	GERAL ONLOAD
-(function() {
-	console.log("FOI");
-	$.getJSON('assets/js/bennu.json', function (data) {
-		console.log(data);
-		console.log("...ATÉ AQUI");
-	});
-})();
-// Fix para o hover no iOS mobile
-	// function isMobile() {
-	// 	var index = navigator.appVersion.indexOf("Mobile");
-	// 	return (index > -1);
-	// }
-	
-$(document).ready(function() {
-//	GERAL READY	
-
-});
+(function(){$(window).scrollTop(0);var position=$(window).scrollTop();$(document).ready(function(){var counter=0;var size=0;function loadData(a,b){$.getJSON("assets/js/bennu.json",function(data){size=Object.keys(data.data).length;$.each(data.data.slice(a,b),function(i,data){var title=data.titulo.toString().replace("dolor sit amet","dot");var card="<div id='"+data.id+"' class='card alfa0'><img src='assets/img/"+data.imagem+"'><div class='info row gutters'><div class='links cf'><div class='col grid10'><small>"+title+"</small></div><div class='col grid1'><a href='#' class='fa fa-heart-o heart'></a></div><div class='col grid1'><a href='#' class='fa fa-share-alt share'></a></div></div><p class='desc'>"+data.descricao+"</p></div></div>";$(card).appendTo(".cards");counter++;$(".loader").addClass("hidden");reveal();});});} loadData(0,4);function reveal(){for(i=0;i<counter;i++){$(".card:eq("+i+")").removeClass("alfa0").delay(1000).addClass("alfa100");}} $(window).scroll(function(){var scroll=$(window).scrollTop();if(counter<size){if($(window).scrollTop()==$(document).height()-$(window).height()){$(".loader").removeClass("hidden");setTimeout(function(){loadData(counter,counter+4);},1000);}}else if(counter==size){counter++;setTimeout(function(){$(".the-end").removeClass("alfa0").addClass("alfa100");},1000);} if(scroll>position){$(".tabs").addClass("off");}else{$(".tabs").removeClass("off");} position=scroll;});$(".menu-filter li").click(function(){$(".menu-filter li").removeClass("active");$(this).addClass("active");});$(".search-link").click(function(){$(".search-box").removeClass("hidden");});$(".search-box .close").click(function(){$(".search-box").addClass("hidden");});});})();
