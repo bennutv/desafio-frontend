@@ -2,10 +2,10 @@
 
 ## Instruções Gerais:
 
-1. O projeto foi consturido como um web-app, é preciso um sevidor web para roda-lo. Utilizei Node.js + npm + http-server.
+1. O projeto foi construído como um web-app, é preciso um servidor web para roda-lo. Utilizei Node.js + npm + http-server.
 2. Instale node.js e npm -> https://www.npmjs.com/get-npm.
-3. Instale http-sever -> no terminal: npm install -g http-server (https://www.npmjs.com/package/http-server).
-4. Acesse o projeto em http://localhost:8080 ou 192.168.0.11:8080 (outro IP que ele vai leh fornecer) para celulares.
+3. Instale http-sever -> no terminal: *npm install -g http-server* (https://www.npmjs.com/package/http-server).
+4. Acesse o projeto em http://localhost:8080 ou 192.168.0.11:8080 (ou outro IP que ele vai lhe fornecer) para celulares.
 
 ## Considerações Gerais:
 
