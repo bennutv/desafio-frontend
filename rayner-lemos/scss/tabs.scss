@@ -1,0 +1,41 @@
+
+.Tabs::-webkit-scrollbar{
+    display:none;
+}
+.Tabs{
+    position:relative;
+    width:100%;
+    background:#f3d546;
+    overflow-x: auto;
+    .Tabs-Swipe{
+        white-space: nowrap;
+        padding:10px 0;
+        position:relative;
+        left:10px;
+        .Tab-Option{
+            padding: 5px 13px;
+            margin: 0px 2px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-family: 'Open Sans', sans-serif;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #fff;
+            display: inline-block;
+            transition: 0.5s all;
+            cursor:pointer;
+        }
+        :hover{
+            background:#edc128;
+        }
+        .Tab-Option.Active{background: #edc128;}
+    }
+}
+@media screen and (min-width:460px) {
+    .Tabs{
+        .Tabs-Swipe{
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

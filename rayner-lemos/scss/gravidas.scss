@@ -1,0 +1,79 @@
+.Gravidas{
+    display:none;
+    position:relative;
+    background:#f5f6fa;
+    padding:10px 10px;
+    .Lista-Noticias{
+        width:100%;
+        .row{
+            margin-right: -0.5rem;
+            margin-left: -0.5rem;
+            .col{
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
+            }
+        }
+        .Noticia{
+            background:#fff;
+            margin-bottom:10px;
+            border-radius:3px;
+            overflow:hidden;
+            .Noticia-Img{
+                background:#efefef;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                overflow:hidden;
+                img{
+                    width:100%;
+                }
+            }
+            .Noticia-Dados{
+                padding:10px;
+                .Noticia-Acoes{
+                    display: flex;
+                    flex-flow: row;
+                    align-items: center;
+                    position: relative;
+                    padding: 3px 0;
+                    .Noticia-Categoria{
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight:700;
+                        font-size:10px;
+                        text-transform: uppercase;
+                        color:#adadb3;
+                        width: calc(100% - 55px);
+                    }
+                    .Noticia-Gostar{
+                        position:absolute;
+                        right:26px;
+                        width:20px;
+                        height:20px;
+                        i{
+                            font-size:17px;
+                            color:#c3c3c8;
+                        }
+                    }
+                    .Noticia-Compartilhar{
+                        position:absolute;
+                        right:0px;
+                        width:20px;
+                        height:20px;
+                        i{
+                            font-size:17px;
+                            color:#c3c3c8;
+                        }
+                    }
+                }
+                .Noticia-Titulo{
+                    font-family: 'Source Sans Pro', sans-serif;
+                    font-size: 14px;
+                    color: #30313e;
+                    line-height: 17px;
+                    margin-top: 5px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

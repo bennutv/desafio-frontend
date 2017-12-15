@@ -1,0 +1,59 @@
+.Menu{
+    width: calc(70% - 60px);
+    padding: 30px 30px;
+    min-width: 240px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.96);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    display:none;
+    .MenuClose-Button{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px;
+        i{
+            color:#fff;
+            font-size:25px;
+        }
+    }
+    .Saudacao{
+        font-family: 'Open Sans', sans-serif;
+        font-size:19px;
+        color:#fff;
+        font-weight:700;
+    }
+    .Busca{
+        margin-top:25px;
+        position:relative;
+        input[type="text"]{
+            background: none;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+            padding: 0px 0px 11px 23px;
+            color: #fff;
+            width: calc(100% - 23px);
+            outline:none;
+        }
+        .fa-search{
+            position:absolute;
+            top:0px;
+            left:0px;
+            color:#fff;
+            font-size:15px;
+        }
+    }
+    .ListaMenu{
+        margin-top:20px;
+        .MenuOption{
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            font-size: 14px;
+            font-weight: 500;
+            font-family: 'Open Sans', sans-serif;
+            color: #fff;
+        }
+    }
+}
