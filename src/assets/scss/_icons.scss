@@ -1,0 +1,98 @@
+// Icons
+.package{
+  display: inline-block;
+  cursor: pointer
+}
+
+.icon-nav{
+  @extend .package;
+  @include size(15px,11px);
+  background: url('/assets/images/icon-menu.png') no-repeat;
+  background-size: cover;
+  margin: 5px 0px;
+
+}
+
+.icon-search{
+  @include size(14px,14px);
+  @extend .package;
+  background: url('/assets/images/icon-search.png') no-repeat;
+  background-size: cover;
+  margin: 0px 3px;
+}
+
+.icon-heart{
+  @extend .package;
+  @include size(13px,12px);
+  background: url('/assets/images/icon-heart.png') no-repeat;
+  background-size: cover;
+  transition: 0.5s linear;
+  margin: 0px 2px;
+  &.active{
+    @include size(13px,12px);
+    background: url('/assets/images/icon-heart-active.png') no-repeat;
+    display: inline-block;
+    background-size: cover;
+    margin: 0px 2px;
+    transition: 0.5s linear;
+  }
+}
+
+.icon-share{
+  @extend .package;
+  @include size(11px,11px);
+  background: url('/assets/images/icon-share.png') no-repeat;
+  background-size: cover;
+  margin: 0px 3px;
+}
+
+
+.box-search {
+  margin: 4px auto;
+  display: table;
+  cursor: pointer;
+  &.active {
+    .search-icon {
+      width: 18px;
+      height: 18px;
+      margin: -3px auto;
+
+      &:before,
+      &:after {
+        top: 4px;
+        right: 6px;
+      }
+
+      &:after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.search-icon {
+  width: 11px;
+  height: 11px;
+  background: transparent;
+  border: 2px solid #fff;
+  display: block;
+  border-radius: 15px;
+  position: relative;
+  transition: all .2s ease-in-out;
+  margin: 0;
+
+  &:before,
+  &:after {
+    width: 2px;
+    height: 8px;
+    display: block;
+    content: '';
+    background: #fff;
+    position: absolute;
+    top: 5px;
+    right: -4px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    transition: all .2s ease-in-out;
+  }
+}

@@ -1,0 +1,16 @@
+<!-- Web -->
+<nav class="d-none d-lg-block d-xl-block web">
+    <ul class="text-center">
+      <li *ngFor="let itemMenu of menu">
+        <a href="#" title="{{itemMenu.name}}">{{itemMenu.name}}</a>
+      </li>
+    </ul>
+  </nav>
+<!-- Mobile -->
+<nav class="d-xl-none d-lg-none mb">
+  <ul class="text-center">
+    <li *ngFor="let itemMenu of menu">
+      <a href="#" title="{{itemMenu.name}}">{{itemMenu.name}}</a>
+    </li>
+  </ul>
+</nav>
