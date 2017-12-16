@@ -1,0 +1,38 @@
+<header>
+  <!-- Web -->
+  <div class="container d-none d-lg-block d-xl-block web">
+    <div class="row">
+      <div class="col-4">
+        <a href="#" class="Mamãe a bordo"><h1 class="logo"> Mamães a bordo </h1></a>
+      </div>
+      <div class="col-8">
+        <app-navbar></app-navbar>
+      </div>
+          <div class="col">
+            <div class="search-web">
+              <h1>Faça sua busca:</h1>
+              <input class="form-control search" type="search" placeholder="digite sua busca" [(ngModel)]="searchInput" (keyup)="onSearch()">
+            </div>
+          </div>
+    </div>
+  </div>
+  <!-- Mobile -->
+  <div class="container-fluid d-xl-none d-lg-none mb">
+    <div class="row">
+      <div class="col-2 column text-center">
+        <i class="icon-nav"></i>
+      </div>
+      <div class="col-8 column">
+        <h1 class="title-header"> Mamães a bordo </h1>
+      </div>
+      <div class="col-2 column text-center">
+        <div class="box-search" [class.active]="showHide.search">
+          <div class="search-icon" (click)="toggleButton('search')"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row search" [class.show]="showHide.search">
+      <input class="form-control" type="search" placeholder="digite sua busca" [(ngModel)]="searchInput" (keyup)="onSearch()">
+    </div>
+  </div>
+</header>

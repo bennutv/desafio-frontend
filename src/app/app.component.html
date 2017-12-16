@@ -1,0 +1,8 @@
+<app-header (queryText)="filterCards($event)" ></app-header>
+<app-navbar class="d-xl-none d-lg-none"></app-navbar>
+<section *ngIf="cards !== undefined; else loading">
+  <app-cards [cards]="cardsFiltered"></app-cards>
+</section>
+<ng-template #loading let-user>
+  <app-loadscroll></app-loadscroll>
+</ng-template>

@@ -1,0 +1,45 @@
+<div class="search-results" infiniteScroll [infiniteScrollDistance]="0" [infiniteScrollThrottle]="300" (scrolled)="onScroll()"
+  [scrollWindow]="true">
+  <div class="container space">
+    <div class="row no-gutters">
+      <div class="box col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" *ngFor="let card of cards">
+        <div class="box-card rounded-bottom">
+          <div class="box-img">
+            <img src="assets/images/thumbnail-cards/{{card.imagem}}" alt="" class="img-fluid rounded-top">
+          </div>
+          <div class="info">
+            <div class="row no-gutters">
+              <div class="col-9 box-title">
+                {{card.titulo}}
+              </div>
+              <div class="col-3 box-action text-right">
+                <div class="d-inline">
+                  <i class="icon-heart" [ngClass]="{'active': card.isFavorite}" (click)="card.isFavorite = !card.isFavorite"></i>
+                </div>
+                <div class="d-inline">
+                  <i class="icon-share"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="box-description">
+              {{card.descricao}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box col-12 text-center align-center" *ngIf="cards?.lenght < 1">
+        <div class="alert alert-danger" role="alert">
+          <strong>Oh snap!</strong> Change a few things up and try submitting again.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div *ngIf="showLoading">
+  <div style="position: relative; margin: 0 auto;">
+    <app-loadscroll></app-loadscroll>
+  </div>
+</div>
