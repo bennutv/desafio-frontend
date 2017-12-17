@@ -19,3 +19,5 @@ Considerações sobre o desenvolvimento:
  * O build foi gerado a partir do Node.js com NPM, utilizando React, a partir do comando `npm run build` no Prompt de comando, a partir diretório do projeto.
 
 Qualquer dificuldade, não hesite em entrar em contato: bezerra.thallys@gmail.com.
+
+Valeu!!! o/
