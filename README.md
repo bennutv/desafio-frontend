@@ -2,7 +2,7 @@
 
 Instruções para execução do Projeto:
 
-* [Clique aqui](http://upbeat-davinci-165c13.bitballoon.com.) ou na URL http://upbeat-davinci-165c13.bitballoon.com para acessar o App fictício.
+* [Clique aqui](http://epic-pasteur-b7fb3b.bitballoon.com/) ou na URL http://epic-pasteur-b7fb3b.bitballoon.com/ para acessar o App fictício.
 
 
 Arquivos upados no repositório:
