@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mamães a bordo</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="fa fa-bars menu"></a>
+        <nav>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </nav>
+        <h1>Mamães a bordo</h1>
+        <a href="#" class="fa fa-search busca"></a>
+        <input type="text" placeholder="Digite sua busca, Mamãe." class="campo-busca" />
+    </header>
+
+<main>
+
+    <div class="tabs">    
+        <ul>
+            <li><a href="#" id="tab1" class="active">Início</a></li>
+            <li><a href="#" id="tab2">Grávidas</a></li>
+            <li><a href="#" id="tab3">Pediatria</a></li>
+            <li><a href="#" id="tab4">Amamentação</a></li>
+        </ul>
+    </div>
+
+    <div class="container aba tab1 active">
+
+        <div id="json-file"></div>
+        <div id="cssload-pgloading" class="loader">
+            <div class="cssload-loadingwrap">
+                <ul class="cssload-bokeh">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container aba tab2">
+        <h2>Aba 2</h2>
+    </div>
+
+    <div class="container aba tab3">
+        <h2>Aba 3</h2>
+    </div>
+
+    <div class="container aba tab4">
+        <h2>Aba 4</h2>
+    </div>
+
+</main>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>

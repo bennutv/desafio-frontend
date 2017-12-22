@@ -1,0 +1,409 @@
+/********** PHONE **********/
+
+/* global */
+
+body {
+    background-color: #f5f6fa;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    color: #f3d546;
+    font-size: 5em;
+    text-align: center;
+}
+
+/* header */
+
+header {
+    background-color: #f3d546;
+    color: #fff;
+    height: 70px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+header a {
+    color: #fff;
+}
+
+header > a:before {
+    font-size: 1.5em;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 22px;
+    margin: 23px 0;
+}
+
+.menu,
+.busca {
+    padding: 23px;
+    position: absolute;
+}
+
+.menu {
+    left: 0;
+    z-index: 1;
+}
+
+.busca {
+    right: 0;
+}
+
+/* nav */
+
+nav {
+    background-color: #edc128;
+    height: 100vh;
+    left: -300px;
+    padding-top: 70px;
+    position: absolute;
+    top: 0;
+    transition: left ease .4s;
+    width: 300px;
+}
+
+.menu.active + nav {
+    left: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0 40px;
+    text-align: left;
+}
+
+nav a {
+    border-radius: 24px;
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    background-color: #f3d546;
+}
+
+/* busca */
+
+input[type=text] {
+    background-color: #edc128;
+    border: none;
+    box-sizing: border-box;
+    color: #fff;
+    outline: none;
+    padding: 26px;
+    position: absolute;
+    right: 65px;
+    top: 0;
+    width: calc(100% - 65px);
+    z-index: 1;
+}
+
+input[type=text]::placeholder {
+    color: rgba(255,255,255,.6);
+}
+
+.campo-busca {
+    display: none;
+}
+
+.campo-busca.active {
+    display: block;
+}
+
+/* main */
+
+main {
+    min-height: 100vh;
+    padding-top: 70px;
+}
+
+/* tabs */
+
+.tabs {
+    background-color: #f3d546;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.tabs ul {
+    display: inline-block;
+    height: 70px;
+    list-style: none;
+    margin: 0;
+    padding: 0 5px;
+}
+
+.tabs li {
+    float: left;
+    margin-top: 22px;
+}
+
+.tabs a {
+    border-radius: 12px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 7px;
+    text-transform: uppercase;
+}
+
+.tabs a:hover {
+   background-color: #edc128;
+}
+
+.tabs a.active {
+    background-color: #f5f6fa;
+    color: #edc128;
+}
+
+/* abas */
+
+.aba {
+    display: none;
+}
+
+.aba.active {
+    display: block;
+}
+
+/* article */
+
+article {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.15);
+    margin: 0 5px 10px;
+}
+
+article:first-of-type {
+    margin-top: 5px;
+}
+
+article > a {
+    display: inline-block;
+    width: auto;
+}
+
+article img {
+    border-radius: 5px 5px 0 0;
+    max-width: 100%;
+}
+
+article > a {
+    position: relative;
+}
+
+article > a:before {
+    background-color: transparent;
+    border-radius: 5px 5px 0 0;
+    content:'';
+    height: calc(100% - 3px);
+    left: 0;
+    mix-blend-mode: multiply;
+    position: absolute;
+    transition: background-color ease .4s;
+    width: 100%;
+}
+
+article > a:hover:before {
+    background-color: rgba(243,213,70,.75);
+}
+
+/* section */
+
+section {
+    padding: 12px 20px 20px;
+    text-align: right;
+}
+
+section .chapeu,
+section > a {
+    color: #adadb3;
+}
+
+section .chapeu {
+    font: bold 12px 'Open Sans';
+    float: left;
+    text-transform: uppercase;
+}
+
+section > a {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+section > a:before {
+    font-size: 1.1em;
+}
+
+section > a.fa-heart-o:hover,
+section > a.fa-heart {
+    color: #ff4c4c;
+}
+
+section > a.fa-share-alt.active,
+section > a.fa-share-alt:hover {
+    color: #4c4cff;
+}
+
+section h3 {
+    font-size: 17px;
+    font-weight: lighter;
+    margin: 12px 0;
+    text-align: left;
+}
+
+section h3 a {
+    color: #30313e;
+}
+
+section h3 a:hover {
+    text-decoration: underline;
+}
+
+/* loader */
+
+.loader {
+    display: none;
+}
+
+.loader.active {
+    display: block;
+}
+
+.loader.inactive {
+    display: none !important;
+}
+
+.loader > div {
+    position: fixed !important;
+}
+
+/********** TABLET **********/
+
+@media(min-width:768px) {
+
+    /* header */
+
+    h1 {
+        font-size: 30px;
+        margin-top: 18px;
+    }
+
+    /* tabs */
+
+    .tabs li {
+        margin-top: 18px;
+    }
+
+    .tabs a {
+        border-radius: 16px;
+        font-size: 16px;
+        padding: 7px 14px;
+    }
+
+    /* article */
+
+    article {
+        display: inline-block;
+        margin-bottom: 10px;
+        width: calc(50% - 15px);
+    }
+
+    article:nth-of-type(2) {
+        margin-top: 5px;
+    }
+
+    article:nth-of-type(odd) {
+        margin-left: 10px;
+    }
+
+    article:nth-of-type(even) {
+        margin-right: 10px;
+    }
+
+    article img {
+        height: auto;
+        width: 100%;
+    }
+
+}
+
+/********** DESKTOP **********/
+
+@media(min-width:1024px) {
+    
+    /* header */
+
+    h1 {
+        font-size: 40px;
+        margin-top: 10px;
+    }
+
+    /* estrutura */
+
+    .container {
+        margin: 0 auto;
+        max-width: 1140px;
+    }
+
+    /* tabs */
+
+    .tabs li {
+        margin-top: 12px;
+    }
+
+    .tabs a {
+        border-radius: 24px;
+        font-size: 24px;
+        margin: 0 5px;
+        padding: 10px 20px;
+    }
+
+    /* article */
+
+    article {
+        display: inline-block;
+        float: none;
+        margin-bottom: 12px;
+        width: calc(33.33% - 15px);
+    }
+
+    article:nth-of-type(2) {
+        margin-right: 0;
+    }
+
+    article:nth-of-type(3) {
+        margin-top: 10px;
+    }
+
+    article:nth-of-type(3n) {
+        margin-left: 5px;
+    }
+
+    article:nth-of-type(even) {
+        margin-right: 5px;
+    }
+
+    article:nth-of-type(odd) {
+        margin-left: 5px;
+    }
+
+}
